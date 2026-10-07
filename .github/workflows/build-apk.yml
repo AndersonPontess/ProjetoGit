@@ -58,15 +58,15 @@ jobs:
           APK="app/build/outputs/apk/debug/app-debug.apk"
           test -s "$APK"
           "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs "$APK"
-          cp "$APK" Treino_Diario_Android_v1.2.apk
-          sha256sum Treino_Diario_Android_v1.2.apk | tee SHA256.txt
+          cp "$APK" Treino_Diario_Android_v1.3.apk
+          sha256sum Treino_Diario_Android_v1.3.apk | tee SHA256.txt
 
       - name: Publicar APK
         uses: actions/upload-artifact@v4
         with:
-          name: Treino-Diario-Android-v1.2
+          name: Treino-Diario-Android-v1.3
           path: |
-            Treino_Diario_Android_v1.2.apk
+            Treino_Diario_Android_v1.3.apk
             SHA256.txt
           if-no-files-found: error
           retention-days: 30
