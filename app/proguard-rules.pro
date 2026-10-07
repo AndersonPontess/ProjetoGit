@@ -1,0 +1,1 @@
+# Sem minificação nesta versão.
