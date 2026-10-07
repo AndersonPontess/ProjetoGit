@@ -49,14 +49,14 @@ input,select,textarea{width:100%;background:#0c1423;color:#fff;border:1px solid 
     <div class="card"><h3 style="margin-top:0">Lembretes</h3><label class="check"><input id="reminders" type="checkbox" onchange="toggleReminders()"><span>Ativar lembretes nativos do Android.</span></label><div class="grid2"><label><span class="label">Sessão 1</span><input id="time1" type="time" onchange="saveSettings()"></label><label><span class="label">Sessão 2</span><input id="time2" type="time" onchange="saveSettings()"></label></div><p class="small">O Android pode atrasar alguns minutos para economizar bateria. Na semana 9 em diante só o primeiro lembrete é usado.</p></div>
     <div class="card"><h3 style="margin-top:0">Preferências</h3><label class="check"><input id="vibration" type="checkbox" onchange="saveSettings()"><span>Vibrar ao mudar entre CONTRAIA e RELAXE.</span></label><label class="check"><input id="discrete" type="checkbox" onchange="saveSettings()"><span>Modo discreto: mostrar “Treino Diário” nas notificações e dentro do app.</span></label></div>
     <div class="card"><h3 style="margin-top:0">Backup</h3><div class="btns"><button class="secondary" onclick="backup()">Salvar backup</button><button class="secondary" onclick="restore()">Restaurar backup</button></div><p class="small">O backup contém apenas seus registros locais e pode ser restaurado após reinstalar o aplicativo.</p></div>
-    <div class="card"><button class="danger" style="width:100%" onclick="wipe()">Apagar todos os dados</button><p class="small">Versão Android 1.2</p></div>
+    <div class="card"><button class="danger" style="width:100%" onclick="wipe()">Apagar todos os dados</button><p class="small">Versão Android 1.3</p></div>
   </section>
 </div>
 
 <nav class="tabs"><div class="tabsin"><button class="tab active" data-p="home" onclick="page('home')">Início</button><button class="tab" data-p="train" onclick="page('train')">Treino</button><button class="tab" data-p="calendar" onclick="page('calendar')">Calendário</button><button class="tab" data-p="progress" onclick="page('progress')">Progresso</button><button class="tab" data-p="settings" onclick="page('settings')">Ajustes</button></div></nav>
 
 <script>
-const VERSION='1.2';
+const VERSION='1.3';
 const $=id=>document.getElementById(id);
 function key(d=new Date()){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
 function parseDate(s){const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d,12)}
