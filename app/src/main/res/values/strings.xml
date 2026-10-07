@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Treino Diário</string>
+    <string name="channel_name">Treino Diário</string>
+    <string name="channel_description">Lembretes das sessões do treino</string>
+</resources>
